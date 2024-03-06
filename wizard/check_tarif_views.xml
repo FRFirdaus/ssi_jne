@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>    
+    <record model="ir.ui.view" id="check_tarif_form_wizard">
+        <field name="name">check_tarif_form_wizard</field>
+        <field name="model">ssi.jne.tarif.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="jne_id" string="JNE Account" required="1"/>
+                    </group>
+                    <group>
+                        <field name="origin_id" string="Origin/Source" required="1"/>
+                        <field name="destination_id" required="1"/>
+                        <field name="weight" string="Weight (Kg)"/>
+                    </group>
+                </group>
+                <field name="line_ids">
+                    <tree editable="bottom">
+                        <field name="origin" readonly="1"/>
+                        <field name="destination" readonly="1"/>
+                        <field name="service" readonly="1"/>
+                        <field name="service_code" readonly="1"/>
+                        <field name="goods_type" readonly="1"/>
+                        <field name="currency" readonly="1"/>
+                        <field name="price" readonly="1"/>
+                        <field name="etd_from" readonly="1"/>
+                        <field name="etd_thru" readonly="1"/>
+                        <field name="times" readonly="1"/>
+                    </tree>
+                </field>
+                <footer>
+                    <button name="check_tarif" type="object" string="Check Tarif" class="btn btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>   
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_check_tarif_form_wizard" model="ir.actions.act_window">
+        <field name="name">Check Tarif JNE</field>
+        <field name="res_model">ssi.jne.tarif.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

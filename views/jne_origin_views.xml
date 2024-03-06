@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="jne_origin_tree_view" model="ir.ui.view">
+        <field name="name">jne_origin_tree_view</field>
+        <field name="model">ssi.jne.origin</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="jne_origin_form_view" model="ir.ui.view">
+        <field name="name">jne_origin_form_view</field>
+        <field name="model">ssi.jne.origin</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="origin_search_view" model="ir.ui.view">
+        <field name="name">origin_search_view</field>
+        <field name="model">ssi.jne.origin</field>
+        <field name="arch" type="xml">
+            <search string="Search Origin">
+                <field name="name"/>
+                <field name="code"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="jne_origin_action" model="ir.actions.act_window">
+        <field name="name">JNE Origin</field>
+        <field name="res_model">ssi.jne.origin</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

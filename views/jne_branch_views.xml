@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="jne_branch_tree_view" model="ir.ui.view">
+        <field name="name">jne_branch_tree_view</field>
+        <field name="model">ssi.jne.branch</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="jne_branch_form_view" model="ir.ui.view">
+        <field name="name">jne_branch_form_view</field>
+        <field name="model">ssi.jne.branch</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="branch_search_view" model="ir.ui.view">
+        <field name="name">branch_search_view</field>
+        <field name="model">ssi.jne.branch</field>
+        <field name="arch" type="xml">
+            <search string="Search Branch">
+                <field name="name"/>
+                <field name="code"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="jne_branch_action" model="ir.actions.act_window">
+        <field name="name">JNE Branch</field>
+        <field name="res_model">ssi.jne.branch</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

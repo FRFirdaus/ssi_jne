@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="jne_menu_parent" name="JNE" sequence="1" action="jne_base_action" groups="group_jne_admin_user" web_icon="ssi_jne,static/description/icon.jpeg"/>
+    <menuitem id="jne_config_menu" parent="jne_menu_parent" sequence="10" action="jne_base_action" groups="group_jne_admin_user" name="Master Settings"/>
+    <menuitem id="jne_branch_menu" parent="jne_menu_parent" sequence="30" action="jne_branch_action" groups="group_jne_admin_user" name="Branch"/>
+    <menuitem id="jne_origin_menu" parent="jne_menu_parent" sequence="40" action="jne_origin_action" groups="group_jne_admin_user" name="Origin"/>
+    <menuitem id="jne_destination_menu" parent="jne_menu_parent" sequence="50" action="jne_dest_action" groups="group_jne_admin_user" name="Destination"/>
+
+</odoo>

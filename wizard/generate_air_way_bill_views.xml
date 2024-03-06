@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>    
+    <record model="ir.ui.view" id="generate_awb_form_wizard">
+        <field name="name">generate_awb_form_wizard</field>
+        <field name="model">ssi.jne.awb.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group string="JNE Account, Customer, and Order">
+                        <field name="jne_id" string="JNE Account" required="1" options="{'no_quick_create': True, 'no_create': True}"/>
+                        <field name="olshop_cust" string="CUST" required="1"/>
+                        <field name="olshop_orderid" string="ORDER ID" required="1"/>
+                    </group>
+                    <group string="Branch, Origin, Destination, and Service">
+                        <label for="branch_id" string="BRANCH"/>
+                        <div>
+                            <field name="branch_id" options="{'no_quick_create': True, 'no_create': True}" string="BRANCH" nolabel="1" placeholder="Search Branch Code by Existing Data"/>
+                            <field name="olshop_branch" string="BRANCH" required="1" nolabel="1" placeholder="Branch Code by Text"/>
+                        </div>
+                        <label for="origin_id" string="ORIGIN"/>
+                        <div>
+                            <field name="origin_id" options="{'no_quick_create': True, 'no_create': True}" string="ORIGIN CODE" nolabel="1" placeholder="Search Origin Code by Existing Data"/>
+                            <field name="olshop_orig" string="ORIGIN CODE" required="1" nolabel="1" placeholder="Origin Code by Text"/>
+                        </div>
+                        <label for="destination_id" string="DESTINATION"/>
+                        <div>
+                            <field name="destination_id" options="{'no_quick_create': True, 'no_create': True}" string="DESTINATION CODE" nolabel="1" placeholder="Search Destination Code by Existing Data"/>
+                            <field name="olshop_dest" string="DESTINATION CODE" required="1" nolabel="1" placeholder="Destination Code by Text"/>
+                        </div>
+                        <field name="olshop_service" string="SERVICE" required="1" placeholder="(REG,YES,SS)"/>
+                    </group>
+                    <group string="Shipper/Sender Information">
+                        <field name="olshop_shipper_name" string="SHIPPER NAME" required="1"/>
+                        <field name="olshop_shipper_addr1" string="SHIPPER ADDR 1" required="1"/>
+                        <field name="olshop_shipper_addr2" string="SHIPPER ADDR 2" required="1"/>
+                        <field name="olshop_shipper_addr3" string="SHIPPER ADDR 3"/>
+                        <field name="olshop_shipper_city" string="SHIPPER CITY" required="1"/>
+                        <field name="olshop_shipper_region" string="SHIPPER REGION"/>
+                        <field name="olshop_shipper_zip" string="SHIPPER ZIP" required="1"/>
+                        <field name="olshop_shipper_phone" string="SHIPPER PHONE" required="1"/>
+                    </group>
+                    <group string="Receiver Information">
+                        <field name="olshop_receiver_name" string="RECEIVER NAME" required="1"/>
+                        <field name="olshop_receiver_addr1" string="RECEIVER ADDR 1" required="1"/>
+                        <field name="olshop_receiver_addr2" string="RECEIVER ADDR 2" required="1"/>
+                        <field name="olshop_receiver_addr3" string="RECEIVER ADDR 3"/>
+                        <field name="olshop_receiver_city" string="RECEIVER CITY" required="1"/>
+                        <field name="olshop_receiver_region" string="RECEIVER REGION"/>
+                        <field name="olshop_receiver_zip" string="RECEIVER ZIP" required="1"/>
+                        <field name="olshop_receiver_phone" string="RECEIVER PHONE" required="1"/>
+                    </group>
+                    <group string="Other Information">
+                        <field name="olshop_qty" string="QTY" required="1"/>
+                        <field name="olshop_weight" string="WEIGHT" required="1"/>
+                        <field name="olshop_inst" string="INSTRUCTION"/>
+                        <field name="olshop_goods_desc" string="GOODS DESCRIPTION" required="1"/>
+                        <field name="olshop_goods_value" string="GOODS VALUE" required="1"/>
+                        <field name="olshop_goods_type" string="GOODS TYPE" required="1"/>
+                        <field name="olshop_ins_flag" string="INSURANCE FLAG (N/Y)" required="1"/>
+                        <field name="olshop_cod_flag" string="COD FLAG (YES/N)" required="1"/>
+                        <field name="olshop_cod_amount" string="COD AMOUNT" required="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="Generate_awb" type="object" string="Generate AWB" class="btn btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>   
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

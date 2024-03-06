@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="jne_groups">
+        <field name="name">JNE Configuration</field>
+        <field name="description">Access Right to setup JNE Master data and configuration</field>
+    </record>
+
+    <!-- JNE Admin Groups -->
+    <record id="group_jne_admin_user" model="res.groups">
+        <field name="name">Admin</field>
+        <field name="category_id" ref="jne_groups"/>
+        <field name="comment">The user will have access to JNE.</field>
+    </record>
+
+</odoo>

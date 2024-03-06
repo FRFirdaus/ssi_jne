@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>    
+    <record model="ir.ui.view" id="trace_tracking_form_wizard">
+        <field name="name">trace_tracking_form_wizard</field>
+        <field name="model">ssi.jne.tracetracking.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="jne_id" string="JNE Account" required="1"/>
+                        <field name="cnote" required="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="do_trace_tracking" type="object" string="Trace Tracking" class="btn btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>   
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
